@@ -1,0 +1,27 @@
+<h1>{{alterego}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad: </td>
+  <dd>{{age}}</dd>
+
+  <td>Método: </td>
+  <dd>{{getHerodDescription()}}</dd>
+
+  <td>Capitalizado: </td>
+  <dd>{{capitalizedName}}</dd>
+</dl>
+
+<button *ngIf="alterego != 'Spiderman'" (click)="changeHero()" class="btn btn-primary mx-2">
+  Cambiar Nombre
+</button>
+
+<button *ngIf="age != 35" (click)="changeAge()" class="btn btn-primary">
+  Cambiar Edad
+</button>
+
+<button (click)="resetForm()" class="btn btn-primary mx-2">
+  Reset
+</button>
